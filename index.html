@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/original.css">
+
+  <title>クリエイター広場</title>
+</head>
+
+
+
+
+
+
+
+
+
+<body>
+  <header class="container-fluid sticky-top shadow-sm">
+    <div class="row align-items-center bg-dark p-1">
+      <div class="pl-1">
+
+<!--画面サイズが小さい時表示されるボタン-->
+      <button data-toggle="collapse" data-target=".collapseSide" aria-expanded="false"
+      aria-controls="collapseSide" class="d-sm-none  navbar-toggler btn btn-outline-secondary
+      border-secondary float-left text-light" id="zoommini"><i class="fas fa-bars"></i></button>
+
+<!--画面サイズが大きい時表示されるボタン-->
+      <button data-toggle="collapse" data-target=".collapseSide" aria-expanded="false"
+      aria-controls="collapseSide" class="d-none d-sm-block  navbar-toggler btn btn-outline-secondary
+       border-secondary float-left" id="zoom"><i class="fas fa-bars"></i></button>
+
+    <a href="#"><img src="img/logo1.jpg" class="mb-0 pt-1 ml-2" alt="タイトルロゴ" width="140px" height="30px"></a>
+      </div>
+
+
+
+<div class="ml-auto">
+<div class="d-md-none  mr-2">
+  <button class="btn btn-outline-light btn-sm"   data-toggle="collapse" data-target="#search" aria-expanded="false"
+  aria-controls="search" style="width:80px;" id="minisearch"><i class="fas fa-search texr-color-info"></i> search</button>
+</div>
+
+      <div class="d-none d-md-block ml-auto collapse" id="search">
+        <form method="GET" action="検索ページ" class="form-inline mx-auto" id="searchinput">
+          <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+              <div class="form-group">
+                <select class="form-control-sm rounded-0 border-dark">
+                  <option value="全て">全て</option>
+                  <option value="イラスト">イラスト</option>
+                  <option value="イラスト">マンガ</option>
+                  <option value="曲">曲</option>
+                  <option value="動画">動画</option>
+                  <option value="歌詞">歌詞</option>
+                  <option value="歌ってみた">歌ってみた</option>
+                  <option value="ゲーム">ゲーム</option>
+                  <option value="ボイス">ボイス</option>
+                  <option value="シナリオ">シナリオ</option>
+                </select>
+              </div>
+            </div>
+</div>
+            <input type="text" placeholder="検索"  class="form-control-sm border-secondary border-buttom-0 border-right-0 border rounded-0">
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-primary btn-sm">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </form>
+          </div>
+
+      </div>
+
+
+
+<!--画面が小さい時-->
+<div class="ml-auto d-lg-none d-block ml-0">
+  <ul class="list-inline mb-auto">
+    <li class="mx-1 dropdown list-inline-item">
+      <button class="btn btn-outline-light btn-sm dropdown-toggle" data-toggle="dropdown"><i class="fas fa-crown"></i></i></>
+      <div class="dropdown-menu">
+        <a href="#" class="dropdown-item">イラスト</a>
+        <a href="#" class="dropdown-item">マンガ</a>
+        <a href="#" class="dropdown-item">曲</a>
+        <a href="#" class="dropdown-item">動画</a>
+        <a href="#" class="dropdown-item">歌詞</a>
+        <a href="#" class="dropdown-item">歌ってみた</a>
+        <a href="#" class="dropdown-item">ゲーム</a>
+        <a href="#" class="dropdown-item">ボイス</a>
+        <a href="#" class="dropdown-item">シナリオ</a>
+      </div>
+    </li>
+
+    <li class="list-inline-item  mx-1"><button class="btn btn-outline-light btn-sm"><i class="fas fa-file-upload"></i></button></li>
+   <li class="list-inline-item  mx-1"><button class="btn btn-outline-light btn-sm"><i class="fas fa-unlock-alt"></i></button></li>
+  </ul>
+</div>
+
+<!--画面が大きい時-->
+      <div class="d-none d-lg-block ml-0">
+        <ul class="list-inline mb-auto">
+          <li class="mx-3 dropdown list-inline-item">
+            <a href="#" class="dropdown-toggle text-light" data-toggle="dropdown"><i class="fas fa-crown"></i>  ランキング</a>
+            <div class="dropdown-menu">
+              <a href="#" class="dropdown-item">イラスト</a>
+              <a href="#" class="dropdown-item">マンガ</a>
+              <a href="#" class="dropdown-item">曲</a>
+              <a href="#" class="dropdown-item">動画</a>
+              <a href="#" class="dropdown-item">歌詞</a>
+              <a href="#" class="dropdown-item">歌ってみた</a>
+              <a href="#" class="dropdown-item">ゲーム</a>
+              <a href="#" class="dropdown-item">ボイス</a>
+              <a href="#" class="dropdown-item">シナリオ</a>
+            </div>
+          </li>
+          <li class="list-inline-item  mx-3"><a href="#" class="text-light"><i class="fas fa-file-upload"></i>  作品投稿</a></li>
+<li class="list-inline-item  mx-3"><a href="#" class="text-light"><i class="fas fa-unlock-alt"></i>  ログイン</a></li>
+        </ul>
+      </div>
+  </header>
+
+
+
+  <div class="container-fluid px-1 bg-light py-2" style="display: flex;">
+
+
+      <div class="d-sm-block collapse show  mr-auto ml-auto" id="joinbutton">
+        <img src="img/new.jpg" alt="" height="70px" width="195px">
+
+        <img src="img/join.jpg" alt="" height="70px" width="195x">
+      </div>
+
+
+
+
+
+
+<div class="row">
+      <div class="d-none col-md-5 col-lg-6 col-xl-6 d-md-block ml-3 carousel slide show collapseSide  h-100" id="feature" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#c1" data-slide-to="0" class="active"></li>
+          <li data-target="#c1" data-slide-to="1"></li>
+          <li data-target="#c1" data-slide-to="2"></li>
+          <li data-target="#c1" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner pb-2">
+          <div class="carousel-item active"><img src="img/tt3.jpg" class="d-block"></div>
+          <div class="carousel-item"><img src="img/tt1.jpg" class="d-block"></div>
+          <div class="carousel-item"><img src="img/tt2.jpg" class="d-block"></div>
+          <div class="carousel-item"><img src="img/tt3.jpg" class="d-block"></div>
+        </div>
+        <a href="#feature" class="carousel-control-prev" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a href="#feature" class="carousel-control-next" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+
+
+
+        <div class="d-none d-sm-block  col-sm-8 col-md-4 col-lg-5 col-xl-5 ml-2 border
+         border-secondary alert alert-light pb-1 shadow-sm mb-1">
+          <h6 class="text-center text-dark text-truncate"><i class="fas fa-exclamation-circle"></i> 運営からのお知らせ</h6>
+          <hr class="m-0 border-secondary">
+          <ul class="pl-3 mb-0">
+            <li class="text-truncate"><a href="#"><i class="fas fa-angle-right small text-dark mr-1"></i>おしらおしらおしらおしらおしらおししらおしらおしらおしらせ１</a></li>
+            <li class="text-truncate"><a href="#"><i class="fas fa-angle-right small text-dark mr-1"></i>お知らせ２２</a></li>
+            <li class="text-truncate"><a href="#"><i class="fas fa-angle-right small text-dark mr-1"></i>お知らせ３</a></li>
+            <li class="text-truncate"><a href="#"><i class="fas fa-angle-right small text-dark mr-1"></i>お知らせ４</a></li>
+          </ul>
+        </div>
+      </div>
+</div>
+
+
+
+
+
+
+
+  <div class="container-fluid px-1 bg-light" style="display: flex;">
+      <nav class="d-none d-sm-block   navbar-dark bg-light  hidden-xs-down sidebar collapse collapseSide mr-2"style="width:230px" id="sidebar">
+            <div class="bg-white border border-secondary">
+              <ul class="nav nav-pills flex-column">
+                <div class="border-bottom border-dark bg-primary pt-2">
+                  <h6 class="nav-item text-center text-light">
+                    ○を一緒に作りたい！
+                  </h6>
+                </div>
+                <li class="nav-item">
+                  <a class="nav-link">音楽</a>
+                  <ul>
+                    <li><a href="#">ボーカロイド関係</a></li>
+                    <li><a href="#">歌ってみた動画</a></li>
+                    <li><a href="#">CD(コンピアルバム)</a></li>
+                  </ul>
+                  <hr class="mb-0">
+                </li>
+
+                <li class="nav-item">
+
+                  <a class="nav-link">ゲーム</a>
+                  <ul>
+                    <li><a  href="#">ノベル</a></li>
+                    <li><a  href="#">RPG</a></li>
+                    <li><a  href="#">アクション</a></li>
+
+                  </ul>
+                  <hr class="mb-0">
+                </li>
+                <li class="nav-item">
+
+                  <a class="nav-link" href="#">ボイスドラマ</a>
+                  <hr class="my-0">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">映像</a>
+                  <hr class="my-0">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">同人誌</a>
+                </li>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+
+
+
+
+
+
+<div class="row no-gutters w-100">
+      <div class="col-12 bg-white border shadow px-2">
+
+        <div class="py-1">
+
+
+          <button type="button" class="mt-2 ml-2 btn btn-sm  float-left  border-dark shadow-sm"
+           data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+
+            並び替え<span class="small"> ▼</span>
+          </button>
+
+
+<div class="row">
+  <div class="col d-none d-md-block">
+          <ul class="nav nav-tabs">
+
+            <li class="nav-item border border-bottom-0"><a href="#" class="nav-link active">イラスト</a></li>
+            <li class="nav-item"><a href="#" class="nav-link border-bottom-0 border border-right">マンガ</a></li>
+            <li class="nav-item"><a href="#" class="nav-link border-bottom-0 border border-right">曲</a></li>
+            <li class="nav-item"><a href="#" class="nav-link border-bottom-0 border border-right">動画</a></li>
+            <li class="nav-item"><a href="#" class="nav-link border-bottom-0 border border-right">歌詞</a></li>
+            <li class="nav-item"><a href="#" class="nav-link border-bottom-0 border border-right">歌ってみた</a></li>
+            <li class="nav-item"><a href="#" class="nav-link border-bottom-0 border border-right">ゲーム</a></li>
+            <li class="nav-item"><a href="#" class="nav-link border-bottom-0 border border-right">ボイス</a></li>
+            <li class="nav-item"><a href="#" class="nav-link border-bottom-0 border border-right">シナリオ</a></li>
+          </ul>
+</div>
+<div class="col d-md-none">
+  <button type="button" class="mt-2  btn btn-sm  float-left  border-dark shadow-sm"
+   data-toggle="collapse" data-target="#genre" aria-expanded="false" aria-controls="genre">
+
+  ジャンル<span class="small"> ▼</span>
+  </button>
+</div>
+
+
+
+        </div>
+
+        <div class="collapse" id="collapseExample">
+          <ul class="mt-1 mb-0 pl-1 list-unstyled">
+            <li><a href="#"><i class="fas fa-angle-right small text-dark mr-1"></i>いいねが多い順</a></li>
+            <li><a href="#"><i class="fas fa-angle-right small text-dark mr-1"></i>閲覧数が多い順</a></li>
+            <li><a href="#"><i class="fas fa-angle-right small text-dark mr-1"></i>投稿日が新しい順</a></li>
+            <li><a href="#"><i class="fas fa-angle-right small text-dark mr-1"></i>投稿日が古い順</a></li>
+          </ul>
+        </div>
+        <div class="collapse d-md-none"  id="genre">
+          <ul class="nav nav-tabs">
+
+            <li class="nav-item border border-bottom-0"><a href="#" class="nav-link active">イラスト</a></li>
+            <li class="nav-item"><a href="#" class="nav-link border-bottom-0 border border-right">マンガ</a></li>
+            <li class="nav-item"><a href="#" class="nav-link border-bottom-0 border border-right">曲</a></li>
+            <li class="nav-item"><a href="#" class="nav-link border-bottom-0 border border-right">動画</a></li>
+            <li class="nav-item"><a href="#" class="nav-link border-bottom-0 border border-right">歌詞</a></li>
+            <li class="nav-item"><a href="#" class="nav-link border-bottom-0 border border-right">歌ってみた</a></li>
+            <li class="nav-item"><a href="#" class="nav-link border-bottom-0 border border-right">ゲーム</a></li>
+            <li class="nav-item"><a href="#" class="nav-link border-bottom-0 border border-right">ボイス</a></li>
+            <li class="nav-item"><a href="#" class="nav-link border-bottom-0 border border-right">シナリオ</a></li>
+          </ul>
+        </div>
+
+
+
+        <div class="row mt-3">
+          <div class="col-6 col-sm-4  col-xl-3 mb-3">
+            <div class="card bg-light shadow">
+              <div class="card-header py-1 px-3">
+                  <a href="#"><h6 class="my-0 text-center card-title">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h6></a>
+              </div>
+              <div class="card-body py-0 px-3">
+                <div class="text-center py-2">
+                  <a href="#"><img src="img/long.jpg" class="img-fluid" style="max-height:200px;"　alt="作品サムネイル"></a>
+                </div>
+                <p class="multiline-text card-text mb-0">説明文せつめいぶんsetumeibun説明文せつめいぶんsetumeibun説明文せつめいぶんsetumeibun説明文せつめいぶんsetumeibun</p>
+                (<a href="#">続きを読む</a>)
+                <br>
+                <a href="#"><img src="img/cat10.jpg" class="icon-mini" alt="nameのアイコン"></img></a>
+                <a href="#">name</a>
+                <a class="text-info" href="#"></a>
+                <br>
+                <span class=text-muted>2019-01-20 16:34:30</span>
+                <div class="row card-footer px-0 py-2">
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-danger">❤</button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-success img-fluid"><i class="fas fa-user-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-6 col-sm-4  col-xl-3 mb-3">
+            <div class="card bg-light shadow">
+              <div class="card-header py-1 px-3">
+                  <a href="#"><h6 class="my-0 text-center card-title">タイトル</h6></a>
+              </div>
+              <div class="card-body py-0 px-3">
+                <div class="text-center py-2">
+                  <a href="#"><img src="img/3.png" class="img-fluid" style="max-height:200px;"　alt="作品サムネイル"></a>
+                </div>
+                <p class="multiline-text card-text mb-0">説明文せつめいぶん</p>
+                (<a href="#">続きを読む</a>)
+                <br>
+                <a href="#"><img src="img/2.png" class="icon-mini" alt="nameのアイコン"></img></a>
+                <a href="#">name</a>
+                <a class="text-info" href="#"></a>
+                <br>
+                <span class=text-muted>2019-01-20 16:34:30</span>
+                <div class="row card-footer px-0 py-2">
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-danger">❤</button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-success img-fluid"><i class="fas fa-user-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-6 col-sm-4  col-xl-3 mb-3">
+            <div class="card bg-light shadow">
+              <div class="card-header py-1 px-3">
+                  <a href="#"><h6 class="my-0 text-center card-title">タイトル</h6></a>
+              </div>
+              <div class="card-body py-0 px-3">
+                <div class="text-center py-2">
+                  <a href="#"><img src="img/2.png" class="img-fluid" style="max-height:200px;" alt="作品サムネイル"></a>
+                </div>
+                <p class="multiline-text card-text mb-0">setumeibun説明文せつめいぶん</p>
+                (<a href="#">続きを読む</a>)
+                <br>
+                <a href="#"><img src="img/3.png" class="icon-mini" alt="nameのアイコン"></img></a>
+                <a href="#">name</a>
+                <a class="text-info" href="#"></a>
+                <br>
+                <span class=text-muted>2019-01-20 16:34:30</span>
+                <div class="row card-footer px-0 py-2">
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-danger">❤</button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-success img-fluid"><i class="fas fa-user-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+            <div class="card bg-light shadow">
+              <div class="card-header py-1 px-3">
+                  <a href="#"><h6 class="my-0 text-center card-title">タイトル</h6></a>
+              </div>
+              <div class="card-body py-0 px-3">
+                <div class="text-center py-2">
+                  <a href="#"><img src="img/cat10.jpg" class="img-fluid" style="max-height:200px;" alt="作品サムネイル"></a>
+                </div>
+                <p class="multiline-text card-text mb-0">んsetumeibun説明文せつめいぶんsetumeibun</p>
+                (<a href="#">続きを読む</a>)
+                <br>
+                <a href="#"><img src="img/1.jpg" class="icon-mini" alt="nameのアイコン"></img></a>
+                <a href="#">name</a>
+                <a class="text-info" href="#"></a>
+                <br>
+                <span class=text-muted>2019-01-20 16:34:30</span>
+                <div class="row card-footer px-0 py-2">
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-danger">❤</button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-success img-fluid"><i class="fas fa-user-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+            <div class="card bg-light shadow">
+              <div class="card-header py-1 px-3">
+                  <a href="#"><h6 class="my-0 text-center card-title">タイトル</h6></a>
+              </div>
+              <div class="card-body py-0 px-3">
+                <div class="text-center py-2">
+                  <a href="#"><img src="img/1.jpg" class="img-fluid" style="max-height:150px;" alt="作品サムネイル"></a>
+                </div>
+                <p class="multiline-text card-text mb-0">説明文せつめいぶんsetumeibun説明文せつめいぶんsetumeibun説明文せつめいぶんsetumeibun説明文せつめいぶんsetumeibun</p>
+                (<a href="#">続きを読む</a>)
+                <br>
+                <a href="#"><img src="img/cat10.jpg" class="icon-mini" alt="nameのアイコン"></img></a>
+                <a href="#">name</a>
+                <a class="text-info" href="#"></a>
+                <br>
+                <span class=text-muted>2019-01-20 16:34:30</span>
+                <div class="row card-footer px-0 py-2">
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-danger">❤</button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-success img-fluid"><i class="fas fa-user-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+            <div class="card bg-light shadow">
+              <div class="card-header py-1 px-3">
+                  <a href="#"><h6 class="my-0 text-center card-title">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h6></a>
+              </div>
+              <div class="card-body py-0 px-3">
+                <div class="text-center py-2">
+                  <a href="#"><img src="img/s1.jpg" class="img-fluid" style="max-height:150px;" alt="作品サムネイル"></a>
+                </div>
+                <p class="multiline-text card-text mb-0">説明文せつめいぶんsetumeibun説明文せつめいぶんsetumeibun説明文せつめいぶんsetumeibun説明文せつめいぶんsetumeibun</p>
+                (<a href="#">続きを読む</a>)
+                <br>
+                <a href="#"><img src="img/イラスト1.png" class="icon-mini" alt="nameのアイコン"></img></a>
+                <a href="#">name</a>
+                <a class="text-info" href="#"></a>
+                <br>
+                <span class=text-muted>2019-01-20 16:34:30</span>
+                <div class="row card-footer px-0 py-2">
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-danger">❤</button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-success img-fluid"><i class="fas fa-user-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+            <div class="card bg-light shadow">
+              <div class="card-header py-1 px-3">
+                  <a href="#"><h6 class="my-0 text-center card-title">タイトル</h6></a>
+              </div>
+              <div class="card-body py-0 px-3">
+                <div class="text-center py-2">
+                  <a href="#"><img src="img/3.png" class="img-fluid" style="max-height:150px;"　alt="作品サムネイル"></a>
+                </div>
+                <p class="multiline-text card-text mb-0">説明文せつめいぶん</p>
+                (<a href="#">続きを読む</a>)
+                <br>
+                <a href="#"><img src="img/2.png" class="icon-mini" alt="nameのアイコン"></img></a>
+                <a href="#">name</a>
+                <a class="text-info" href="#"></a>
+                <br>
+                <span class=text-muted>2019-01-20 16:34:30</span>
+                <div class="row card-footer px-0 py-2">
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-danger">❤</button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-success img-fluid"><i class="fas fa-user-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+            <div class="card bg-light shadow">
+              <div class="card-header py-1 px-3">
+                  <a href="#"><h6 class="my-0 text-center card-title">タイトル</h6></a>
+              </div>
+              <div class="card-body py-0 px-3">
+                <div class="text-center py-2">
+                  <a href="#"><img src="img/1.jpg" class="img-fluid" style="max-height:150px;" alt="作品サムネイル"></a>
+                </div>
+                <p class="multiline-text card-text mb-0">説明文せつめいぶんsetumeibun説明文せつめいぶんsetumeibun説明文せつめいぶんsetumeibun説明文せつめいぶんsetumeibun</p>
+                (<a href="#">続きを読む</a>)
+                <br>
+                <a href="#"><img src="img/cat10.jpg" class="icon-mini" alt="nameのアイコン"></img></a>
+                <a href="#">name</a>
+                <a class="text-info" href="#"></a>
+                <br>
+                <span class=text-muted>2019-01-20 16:34:30</span>
+                <div class="row card-footer px-0 py-2">
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-danger">❤</button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-success img-fluid"><i class="fas fa-user-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+            <div class="card bg-light shadow">
+              <div class="card-header py-1 px-3">
+                  <a href="#"><h6 class="my-0 text-center card-title">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h6></a>
+              </div>
+              <div class="card-body py-0 px-3">
+                <div class="text-center py-2">
+                  <a href="#"><img src="img/long.jpg" class="img-fluid" style="max-height:150px;"　alt="作品サムネイル"></a>
+                </div>
+                <p class="multiline-text card-text mb-0">説明文せつめいぶんsetumeibun説明文せつめいぶんsetumeibun説明文せつめいぶんsetumeibun説明文せつめいぶんsetumeibun</p>
+                (<a href="#">続きを読む</a>)
+                <br>
+                <a href="#"><img src="img/cat10.jpg" class="icon-mini" alt="nameのアイコン"></img></a>
+                <a href="#">name</a>
+                <a class="text-info" href="#"></a>
+                <br>
+                <span class=text-muted>2019-01-20 16:34:30</span>
+                <div class="row card-footer px-0 py-2">
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-danger">❤</button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-success img-fluid"><i class="fas fa-user-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+            <div class="card bg-light shadow">
+              <div class="card-header py-1 px-3">
+                  <a href="#"><h6 class="my-0 text-center card-title">タイトル</h6></a>
+              </div>
+              <div class="card-body py-0 px-3">
+                <div class="text-center py-2">
+                  <a href="#"><img src="img/cat10.jpg" class="img-fluid" style="max-height:150px;" alt="作品サムネイル"></a>
+                </div>
+                <p class="multiline-text card-text mb-0">んsetumeibun説明文せつめいぶんsetumeibun</p>
+                (<a href="#">続きを読む</a>)
+                <br>
+                <a href="#"><img src="img/1.jpg" class="icon-mini" alt="nameのアイコン"></img></a>
+                <a href="#">name</a>
+                <a class="text-info" href="#"></a>
+                <br>
+                <span class=text-muted>2019-01-20 16:34:30</span>
+                <div class="row card-footer px-0 py-2">
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-danger">❤</button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-success img-fluid"><i class="fas fa-user-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+            <div class="card bg-light shadow">
+              <div class="card-header py-1 px-3">
+                  <a href="#"><h6 class="my-0 text-center card-title">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h6></a>
+              </div>
+              <div class="card-body py-0 px-3">
+                <div class="text-center py-2">
+                  <a href="#"><img src="img/s1.jpg" class="img-fluid" style="max-height:150px;" alt="作品サムネイル"></a>
+                </div>
+                <p class="multiline-text card-text mb-0">説明文せつめいぶんsetumeibun説明文せつめいぶんsetumeibun説明文せつめいぶんsetumeibun説明文せつめいぶんsetumeibun</p>
+                (<a href="#">続きを読む</a>)
+                <br>
+                <a href="#"><img src="img/イラスト1.png" class="icon-mini" alt="nameのアイコン"></img></a>
+                <a href="#">name</a>
+                <a class="text-info" href="#"></a>
+                <br>
+                <span class=text-muted>2019-01-20 16:34:30</span>
+                <div class="row card-footer px-0 py-2">
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-danger">❤</button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-success img-fluid"><i class="fas fa-user-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+            <div class="card bg-light shadow">
+              <div class="card-header py-1 px-3">
+                  <a href="#"><h6 class="my-0 text-center card-title">タイトル</h6></a>
+              </div>
+              <div class="card-body py-0 px-3">
+                <div class="text-center py-2">
+                  <a href="#"><img src="img/1.jpg" class="img-fluid" style="max-height:150px;" alt="作品サムネイル"></a>
+                </div>
+                <p class="multiline-text card-text mb-0">説明文せつめいぶんsetumeibun説明文せつめいぶんsetumeibun説明文せつめいぶんsetumeibun説明文せつめいぶんsetumeibun</p>
+                (<a href="#">続きを読む</a>)
+                <br>
+                <a href="#"><img src="img/cat10.jpg" class="icon-mini" alt="nameのアイコン"></img></a>
+                <a href="#">name</a>
+                <a class="text-info" href="#"></a>
+                <br>
+                <span class=text-muted>2019-01-20 16:34:30</span>
+                <div class="row card-footer px-0 py-2">
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-danger">❤</button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-success img-fluid"><i class="fas fa-user-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+            <div class="card bg-light shadow">
+              <div class="card-header py-1 px-3">
+                  <a href="#"><h6 class="my-0 text-center card-title">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h6></a>
+              </div>
+              <div class="card-body py-0 px-3">
+                <div class="text-center py-2" style="height:170px;">
+                  <a href="#"><img src="img/long.jpg" class="img-fluid" style="max-height:150px;"　alt="作品サムネイル"></a>
+                </div>
+                <p class="multiline-text card-text mb-0">説明文せつめいぶんsetumeibun説明文せつめいぶんsetumeibun説明文せつめいぶんsetumeibun説明文せつめいぶんsetumeibun</p>
+                (<a href="#">続きを読む</a>)
+                <br>
+                <a href="#"><img src="img/cat10.jpg" class="icon-mini" alt="nameのアイコン"></img></a>
+                <a href="#">name</a>
+                <a class="text-info" href="#"></a>
+                <br>
+                <span class=text-muted>2019-01-20 16:34:30</span>
+                <div class="row card-footer px-0 py-2">
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-danger">❤</button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-success img-fluid"><i class="fas fa-user-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+            <div class="card bg-light shadow">
+              <div class="card-header py-1 px-3">
+                  <a href="#"><h6 class="my-0 text-center card-title">タイトル</h6></a>
+              </div>
+              <div class="card-body py-0 px-3">
+                <div class="text-center py-2"  style="height:170px;">
+                  <a href="#"><img src="img/3.png" class="img-fluid" style="max-height:150px;"　alt="作品サムネイル"></a>
+                </div>
+                <p class="multiline-text card-text mb-0">説明文せつめいぶん</p>
+                (<a href="#">続きを読む</a>)
+                <br>
+                <a href="#"><img src="img/2.png" class="icon-mini" alt="nameのアイコン"></img></a>
+                <a href="#">name</a>
+                <a class="text-info" href="#"></a>
+                <br>
+                <span class=text-muted>2019-01-20 16:34:30</span>
+                <div class="row card-footer px-0 py-2">
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-danger">❤</button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-success img-fluid"><i class="fas fa-user-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+            <div class="card bg-light shadow">
+              <div class="card-header py-1 px-3">
+                  <a href="#"><h6 class="my-0 text-center card-title">タイトル</h6></a>
+              </div>
+              <div class="card-body py-0 px-3">
+                <div class="text-center py-2">
+                  <a href="#"><img src="img/2.png" class="img-fluid" style="max-height:150px;" alt="作品サムネイル"></a>
+                </div>
+                <p class="multiline-text card-text mb-0">setumeibun説明文せつめいぶん</p>
+                (<a href="#">続きを読む</a>)
+                <br>
+                <a href="#"><img src="img/3.png" class="icon-mini" alt="nameのアイコン"></img></a>
+                <a href="#">name</a>
+                <a class="text-info" href="#"></a>
+                <br>
+                <span class=text-muted>2019-01-20 16:34:30</span>
+                <div class="row card-footer px-0 py-2">
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-danger">❤</button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-success img-fluid"><i class="fas fa-user-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+            <div class="card bg-light shadow">
+              <div class="card-header py-1 px-3">
+                  <a href="#"><h6 class="my-0 text-center card-title">タイトル</h6></a>
+              </div>
+              <div class="card-body py-0 px-3">
+                <div class="text-center py-2">
+                  <a href="#"><img src="img/cat10.jpg" class="img-fluid" style="max-height:150px;" alt="作品サムネイル"></a>
+                </div>
+                <p class="multiline-text card-text mb-0">んsetumeibun説明文せつめいぶんsetumeibun</p>
+                (<a href="#">続きを読む</a>)
+                <br>
+                <a href="#"><img src="img/1.jpg" class="icon-mini" alt="nameのアイコン"></img></a>
+                <a href="#">name</a>
+                <a class="text-info" href="#"></a>
+                <br>
+                <span class=text-muted>2019-01-20 16:34:30</span>
+                <div class="row card-footer px-0 py-2">
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-danger">❤</button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-block btn-outline-success img-fluid"><i class="fas fa-user-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+<div class="row">
+<div class="col text-center">
+        <nav class="my-5" >
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled"><a href="#" class="page-link">&laquo</a></li>
+            <li class="page-item active"><a href="#" class="page-link">1</a></li>
+            <li class="page-item"><a href="#" class="page-link">2</a></li>
+            <li class="page-item"><a href="#" class="page-link">3</a></li>
+            <li class="page-item"><a href="#" class="page-link">4</a></li>
+            <li class="page-item"><a href="#" class="page-link">5</a></li>
+            <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
+          </ul>
+        </nav>
+      </div>
+      </div>
+
+      <h1 id="aiu">aa</h1>
+<button id="a">aa</button>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/original.js"></script>
+
+
+
+
+</html>

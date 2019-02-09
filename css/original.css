@@ -1,0 +1,42 @@
+ .content {
+  float: left;
+  min-width: 700px;
+  max-width: 1180px;
+  margin-left: 20px;
+}
+
+.back{
+  background-color:#EAE9E9;
+}
+
+.dl {
+  border-right: 1px dashed #bbb;
+  border-right: 1px dashed #fff;
+}
+
+
+/*既定の行数(3)以降は省略*/
+.card-text{
+
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+      font-size:14px
+}
+
+.card-title{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.icon-mini{
+  max-height:30px;
+  max-width:30px;
+}
+
+a:hover {
+text-decoration: none;
+}
