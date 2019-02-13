@@ -6,7 +6,8 @@
 }
 
 .back{
-  background-color:#EAE9E9;
+
+  background-image:url(img/body.gif);
 }
 
 .dl {
@@ -39,4 +40,8 @@
 
 a:hover {
 text-decoration: none;
+}
+
+.relative{
+  position: absolute;
 }
